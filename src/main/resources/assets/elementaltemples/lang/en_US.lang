@@ -1,3 +1,20 @@
-item.elementaltemples:mapleLeaf.name=Maple Leaf of Awesomeness
-tile.elementaltemples:flag.name=Canadian Flag of Awesomeness
+#Keys
+keys.elementaltemples.category=Elemental Temples
+keys.elementaltemples.charge=Charge
+keys.elementaltemples.release=Release
+
+#Creative Tabs
 itemGroup.elementaltemples=Elemental Temples
+
+#Items
+item.elementaltemples:mapleLeaf.name=Maple Leaf of Awesomeness
+item.elementaltemples:desertRelic.name=Desert Relic
+item.elementaltemples:forestRelic.name=Forest Relic
+item.elementaltemples:hellRelic.name=Hell Relic
+item.elementaltemples:mountainRelic.name=Mountain Relic
+item.elementaltemples:oceanRelic.name=Ocean Relic
+item.elementaltemples:skyRelic.name=Sky Relic
+item.elementaltemples:enderRelic.name=Ender Relic
+
+#Blocks
+tile.elementaltemples:flag.name=Canadian Flag of Awesomeness

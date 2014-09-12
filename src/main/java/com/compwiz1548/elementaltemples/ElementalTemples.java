@@ -1,8 +1,10 @@
 package com.compwiz1548.elementaltemples;
 
+import com.compwiz1548.elementaltemples.client.handler.KeyInputEventHandler;
 import com.compwiz1548.elementaltemples.handler.ConfigurationHandler;
 import com.compwiz1548.elementaltemples.init.ModBlocks;
 import com.compwiz1548.elementaltemples.init.ModItems;
+import com.compwiz1548.elementaltemples.init.Recipes;
 import com.compwiz1548.elementaltemples.proxy.IProxy;
 import com.compwiz1548.elementaltemples.reference.Reference;
 import com.compwiz1548.elementaltemples.utility.LogHelper;
@@ -26,10 +28,21 @@ public class ElementalTemples
     public void preInit(FMLPreInitializationEvent event)
     {
         //Load network handling, mod config, items/blocks
+
+        //Initialize config
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        //Set config handler
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        //Register keybindings
+        proxy.registerKeyBindings();
+
+        //Initialize Items
         ModItems.init();
+
+        //Initialize Blocks
         ModBlocks.init();
+
         LogHelper.info("Pre Initialization Complete!");
     }
 
@@ -37,6 +50,13 @@ public class ElementalTemples
     public void init(FMLInitializationEvent event)
     {
         //Register GUI, tile entities, crafting recipes, general event handling
+
+        //Initialize recipes
+        Recipes.init();
+
+        //Set key input event handler
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+
         LogHelper.info("Initialization Complete!");
     }
 

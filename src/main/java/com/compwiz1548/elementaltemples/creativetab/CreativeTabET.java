@@ -12,7 +12,7 @@ public class CreativeTabET
         @Override
         public Item getTabIconItem()
         {
-            return ModItems.mapleLeaf;
+            return ModItems.enderRelic;
         }
     };
 }
